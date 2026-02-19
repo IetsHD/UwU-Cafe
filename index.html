@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kassa Systeem</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Kassa Systeem</h1>
+    <p>Selecteer items en bekijk je winkelwagen.</p>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <div class="card-head">
+        <h2>Items</h2>
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Zoek item..." />
+        </div>
+      </div>
+
+      <div id="productGrid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <aside class="card">
+      <div class="card-head">
+        <h2>Winkelwagen</h2>
+        <button id="clearCartBtn" class="btn btn-ghost" type="button">Leegmaken</button>
+      </div>
+
+      <div id="cartEmpty" class="empty">
+        <p>Je winkelwagen is leeg.</p>
+      </div>
+
+      <div id="cartList" class="cart" hidden></div>
+
+      <div class="totals">
+        <div class="row">
+          <span>Subtotaal</span>
+          <strong id="subtotal">€ 0,00</strong>
+        </div>
+        <div class="row">
+          <span>BTW (21%)</span>
+          <strong id="vat">€ 0,00</strong>
+        </div>
+        <div class="row grand">
+          <span>Totaal</span>
+          <strong id="grandTotal">€ 0,00</strong>
+        </div>
+        <button id="checkoutBtn" class="btn btn-primary" type="button">Afrekenen</button>
+        <p class="hint" id="checkoutHint"></p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <small>Static webapp — geschikt voor GitHub Pages (github.io).</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
